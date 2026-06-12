@@ -56,13 +56,14 @@ history = model.fit(
     y_train,
     epochs=5,
     batch_size=64,
-    validation_split=0.2
+    validation_split=0.1,
+    verbose=2
 )
 
-# Evaluation
 loss, acc = model.evaluate(
     X_test,
-    y_test
+    y_test,
+    verbose=0
 )
 
 print("Test Accuracy:", acc)
